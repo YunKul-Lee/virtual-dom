@@ -1,5 +1,5 @@
 /* @jsx createElement */
-import { createDOM, createElement, render } from './react'
+import { createElement, render } from './react'
 
 // const vdom = createElement('p', {},
 //     createElement('h1', {}, "React 만들기"),
@@ -10,12 +10,20 @@ import { createDOM, createElement, render } from './react'
 //     )
 // );
 
+function Title(props) {
+    return <h1>{props.children}</h1>;
+}
+
+function Item(props) {
+    return <li style={`color:${props.color}`}>{props.children}</li>;
+}
+
 const vdom = <p>
-    <h1>React 만들기</h1>
+    <Title>React 만들기</Title>
     <ul>
-        <li style="color:red">첫번째 아이템</li>
-        <li style="color:blue">두번째 아이템</li>
-        <li style="color:green">세번째 아이템</li>
+        <Item color="red">첫번째 아이템</Item>
+        <Item color="blue">두번째 아이템</Item>
+        <Item color="green">세번째 아이템</Item>
     </ul>
 </p>
 
