@@ -12,14 +12,12 @@ function Item(props) {
 }
 
 const App = () => <p>
-    <Title>React 만들기</Title>
+    <Title label="React">React 만들기</Title>
     <ul>
         <Item color="red">첫번째 아이템</Item>
         <Item color="blue">두번째 아이템</Item>
         <Item color="green">세번째 아이템</Item>
     </ul>
 </p>
-
-// console.log(vdom);
 
 render(<App />, document.querySelector('#root'));
